@@ -33,7 +33,7 @@ The primary objective is to predict a target variable using different regression
 |**overcast**| 0 - no, 1-yes|
 |**partly cloudy**| 0 - no, 1-yes|
 
-#Table of Contents:
+# Table of Contents:
 1. Data Analysis
 2. Data Cleaning
 3. Exploratory Data Analysis
