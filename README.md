@@ -34,29 +34,37 @@ The primary objective is to predict a target variable using different regression
 |**partly cloudy**| 0 - no, 1-yes|
 
 # Table of Contents:
-1. Data Analysis
-2. Data Cleaning
-3. Exploratory Data Analysis
+1. Preliminary Data Analysis
+2. Exploratory Data Analysis
+3. Data Splitting
 4. Data Preprocessing
 5. Model Training and Hyperparameter Optimization
 6. Model Evaluation
 7. Results
 8. Conclusion
 
+# Important
+I have uploaded two Jupyter Notebook files:
+
+`Notebook 1:` This file contains a model trained on data that includes outliers and skewness, with missing values in the windBearing feature dropped.
+
+`Notebook 2:` This file features a model trained on data with outliers removed and a log transformation applied to the target feature.
 
 # Results
-### RandomForestRegressor as best model
+### From first notebook: RandomForestRegressor as best model
 - **R2 Score**: Train: 0.704, Test: 0.706
 - **MAE**: Train: 24.369, Test: 25.116
 - **RMSE**: Train: 40.372, Test: 41.505
 
-### KNeighborsRegressor
-- **R2 Score**: Train: 0.690, Test: 0.692
-- **MAE**: Train: 22.354, Test: 24.298
-- **RMSE**: Train: 41.282, Test: 42.487
+
+### From second notebook XGBRegressor as best model
+- **R2 Score**: Train: 0.631, Test: 0.64
+- **MAE**: Train: 0.407, Test: 0.381
+- **RMSE**: Train: 0.533, Test: 0.498
 
 ### Conclusion
-The RandomForestRegressor and KNeighborsRegressor both showed minimal signs of overfitting, with similar performance on both the training and test sets. 
+From the first notebook: The RandomForestRegressor and KNeighborsRegressor both showed minimal signs of overfitting, with similar performance on both the training and test sets. 
+From the second Notebook: The RandomForestRegressor and XGBRegressor both showed same results with minimal difference, but XGB  has the most predictions aligned with the actual values.
 
 ### Recommendations for Improvement
 - **Feature Engineering**: Explore additional feature engineering techniques.
