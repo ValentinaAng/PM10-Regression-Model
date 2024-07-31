@@ -50,6 +50,8 @@ I have uploaded two Jupyter Notebook files:
 
 `Notebook 2:` This file features a model trained on data with outliers removed and a log transformation applied to the target feature.
 
+`Notebook 3:` This file contains a model trained on data with removed outliers and a log transformation applied to the target feature, the difference is here i used PCA.
+
 # Results
 ### From first notebook: RandomForestRegressor as best model
 - **R2 Score**: Train: 0.704, Test: 0.706
@@ -59,12 +61,18 @@ I have uploaded two Jupyter Notebook files:
 
 ### From second notebook XGBRegressor as best model
 - **R2 Score**: Train: 0.631, Test: 0.64
-- **MAE**: Train: 0.407, Test: 0.381
-- **RMSE**: Train: 0.533, Test: 0.498
+- **MAE**: Train: 0.381, Test: 0.407
+- **RMSE**: Train: 0.498, Test: 0.533
+
+  ### From third notebook KNN as best model
+- **R2 Score**: Train: 0.602, Test: 0.602
+- **MAE**: Train: 0.401, Test: 0.428
+- **RMSE**: Train: 0.535, Test: 0.562
 
 ### Conclusion
-From the first notebook: The RandomForestRegressor and KNeighborsRegressor both showed minimal signs of overfitting, with similar performance on both the training and test sets. 
+From the first Notebook: The RandomForestRegressor and KNeighborsRegressor both showed minimal signs of overfitting, with similar performance on both the training and test sets. 
 From the second Notebook: The RandomForestRegressor and XGBRegressor both showed same results with minimal difference, but XGB  has the most predictions aligned with the actual values.
+From the third Notebook: KNN is the best performing model among the three evaluated models. It has the highest R² scores and the lowest MAE and RMSE values for both the test and train sets, indicating it provides the most accurate and reliable predictions.
 
 ### Recommendations for Improvement
 - **Feature Engineering**: Explore additional feature engineering techniques.
